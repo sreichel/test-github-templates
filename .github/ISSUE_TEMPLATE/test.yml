@@ -1,0 +1,102 @@
+name: Bug Report
+description: Technical issue with the OpenMage LTS core components.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.9.4.x (dev-main)
+        - 2.0
+        - v20.0.18
+        - v20.0.17
+        - v20.0.16
+        - v20.0.15
+        - v20.0.14
+        - v20.0.13
+        - v20.0.12
+        - v20.0.11
+        - v20.0.10
+        - v20.0.9
+        - v20.0.8
+        - v20.0.7
+        - v20.0.6
+        - v20.0.5
+        - v20.0.4
+        - v20.0.3
+        - v20.0.2
+        - v20.0.1
+        - v20.0.0
+        - v19.4.21
+        - v19.4.20
+        - v19.4.19
+        - v19.4.18
+        - v19.4.17
+        - v19.4.16
+        - v19.4.15
+        - v19.4.14
+        - v19.4.13
+        - v19.4.12
+        - v19.4.11
+        - v19.4.10
+        - v19.4.9
+        - v19.4.8
+        - v19.4.7
+        - v19.4.6
+        - v19.4.5
+        - v19.4.4
+        - v19.4.3
+        - v19.4.2
+        - v19.4.1
+        - v19.4.0
+    validations:
+      required: true
+  - type: dropdown
+    id: php-version
+    attributes:
+      label: What PHP version are you seeing the problem on?
+      multiple: true
+      options:
+        - 7.3
+        - 7.4
+        - 8.0
+        - 8.1
+        - 8.2
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/OpenMage/magento-lts)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
